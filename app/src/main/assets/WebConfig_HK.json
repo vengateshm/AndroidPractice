@@ -1,0 +1,52 @@
+{
+  "services": [
+    {
+      "serviceId": "trading",
+      "serviceURLs": {
+        "uat": "https://oet-uat2.dbs.com/resources/oet-base-app/v5/",
+        "prod": "https://oet-uat2.dbs.com/resources/oet-base-app/v5/",
+        "sit": "https://oet-uat2.dbs.com/resources/oet-base-app/v5/",
+        "pilot": "https://oet-uat2.dbs.com/resources/oet-base-app/v5/"
+      },
+      "params": [
+        "channel",
+        "sysGenUid",
+        "serviceFlag",
+        "encryptedPortfolios",
+        "authGWCode",
+        "region",
+        "clientSegment",
+        "landingPage",
+        "portfolioNo",
+        "deviceInfo",
+        "entryPoint",
+        "holdingId"
+      ],
+      "renderString": "window.renderbaseApp"
+    },
+    {
+      "serviceId": "crypto",
+      "serviceURLs": {
+        "uat": "https://oet-uat2.dbs.com/resources/oet-base-app/v4/",
+        "prod": "https://oet-uat2.dbs.com/resources/oet-base-app/v4/",
+        "sit": "https://oet-uat2.dbs.com/resources/oet-base-app/v4/",
+        "pilot": "https://oet-uat2.dbs.com/resources/oet-base-app/v4/"
+      },
+      "params": [
+        "channel",
+        "sysGenUid",
+        "serviceFlag",
+        "encryptedPortfolios",
+        "authGWCode",
+        "region",
+        "clientSegment",
+        "landingPage",
+        "portfolioNo",
+        "deviceInfo",
+        "entryPoint",
+        "holdingId"ō
+      ],
+      "renderString": "window.renderbaseApp"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.vengateshm.androidpractice">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:name=".AndroidPracticeApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidPractice">
+        <activity
+            android:name=".DemoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".excel_to_pdf.FileConversionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".sliding_navigation_drawer.SlidingNavDrawerActivity"
+            android:exported="false"
+            android:label="@string/title_activity_sliding_nav_drawer"
+            android:theme="@style/Theme.AndroidPractice.NoActionBar" />
+        <activity
+            android:name=".fortnight_calendar.FortNightCalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".airbnb.mavericks.MavericksSampleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".retrofit.RetrofitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".preferences_datastore.PreferenceDatastoreActivity"
+            android:exported="false" />
+        <activity
+            android:name=".paymentsIntegration.razorPay.android_sdk.MyPaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".paymentsIntegration.razorPay.android_sdk.OrderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".paymentsIntegration.razorPay.payment_link_webview.RazorPayPaymentActivity"
+            android:exported="true">
+            <intent-filter android:label="razor_pay_activity_deep_link">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- Accepts URIs that begin with "http://www.example.com/gizmos” -->
+                <data
+                    android:host="www.android-vengateshm-androidpractice.com"
+                    android:pathPrefix="/redirect-to-category"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".constraint_layout.ConstraintLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".liveDataOneTimeEvent.OneTimeEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".liveDataFlowViewModelTesting.WeatherDataActivity"
+            android:exported="false" />
+        <activity
+            android:name=".webviewReactJS.WebViewReactJsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".observable_types.ObservableTypesActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.App.Starting">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:exported="true"
+            tools:node="merge" />
+        <activity
+            android:name=".onesdk_webview.ui.OneSDKWebPageLandingActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".mvi.ui.DemoActivity" />
+
+        <receiver
+            android:name="com.razorpay.RzpTokenReceiver"
+            android:exported="true"
+            tools:node="merge"
+            tools:replace="android:exported" />
+    </application>
+
+</manifest>

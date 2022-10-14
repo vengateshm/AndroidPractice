@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#142F43">
+
+    <ImageView
+        android:id="@+id/ivSun"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/sun"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivEarth"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/earth"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@+id/ivSun"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivMars"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/mars"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@+id/ivSun"
+        app:layout_constraintCircleAngle="110"
+        app:layout_constraintCircleRadius="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivSaturn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/saturn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintCircle="@+id/ivSun"
+        app:layout_constraintCircleAngle="235"
+        app:layout_constraintCircleRadius="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSun"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sun is the biggest star of our solar system."
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvEarth"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="The only planet where life exists"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMars"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mars will be terraformed by Elon Musks' SpaceX"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSaturn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Saturn has rings and more moons."
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    tools:context=".observable_types.ObservableTypesActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bLivedata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trigger LiveData" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLivedata"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bStateFlow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trigger StateFlow" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvStateFlow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bFlow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trigger Flow" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFlow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bSharedFlow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trigger SharedFlow" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvSharedFlow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-" />
+</LinearLayout>

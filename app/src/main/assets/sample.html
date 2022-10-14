@@ -1,0 +1,16 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="msg">Hello</div>
+<script>
+      function greet(name) {
+        var ob = document.getElementById("msg");
+        ob.innerText = ob.innerText + ' ' + name + '!';
+        android.makeToast(ob.innerText);
+      }
+
+</script>
+</body>
+</html>
