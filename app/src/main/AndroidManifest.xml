@@ -16,15 +16,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidPractice">
         <activity
-            android:name=".DemoActivity"
+            android:name=".uicomponents.UiComponentsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".excel_to_pdf.FileConversionActivity"
-            android:exported="false" />
+            android:name=".mvi.ui.DemoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".sliding_navigation_drawer.SlidingNavDrawerActivity"
             android:exported="false"
@@ -95,7 +99,6 @@
         <activity
             android:name=".onesdk_webview.ui.OneSDKWebPageLandingActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".mvi.ui.DemoActivity" />
 
         <receiver
             android:name="com.razorpay.RzpTokenReceiver"
