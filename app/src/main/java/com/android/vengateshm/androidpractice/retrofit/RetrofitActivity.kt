@@ -6,7 +6,10 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.android.vengateshm.androidpractice.R
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class RetrofitActivity : AppCompatActivity() {
 
@@ -22,7 +25,7 @@ class RetrofitActivity : AppCompatActivity() {
             val anxietyResponse = async {
                 Log.d("RETROFIT", "Anxiety")
                 val response = DictionaryApiClient.api.getWordInfo("anxiety")
-                withContext(Dispatchers.Main.immediate){
+                withContext(Dispatchers.Main.immediate) {
                     tvText.text = response.toString()
                 }
             }
@@ -30,7 +33,7 @@ class RetrofitActivity : AppCompatActivity() {
             val jeopardyResponse = async {
                 Log.d("RETROFIT", "Jeopardy")
                 val response = DictionaryApiClient.api.getWordInfo("jeopardy")
-                withContext(Dispatchers.Main.immediate){
+                withContext(Dispatchers.Main.immediate) {
                     tvText.text = response.toString()
                 }
             }

@@ -44,7 +44,8 @@
         "portfolioNo",
         "deviceInfo",
         "entryPoint",
-        "holdingId"ō
+        "holdingId"
+        ō
       ],
       "renderString": "window.renderbaseApp"
     }

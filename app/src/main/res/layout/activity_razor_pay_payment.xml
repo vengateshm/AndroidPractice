@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".paymentsIntegration.razorPay.payment_link_webview.RazorPayPaymentActivity">
+    tools:context=".payment_integration.razorPay.payment_link_webview.RazorPayPaymentActivity">
 
     <WebView
         android:id="@+id/webView"

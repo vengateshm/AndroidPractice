@@ -13,4 +13,6 @@
     <string name="menu_slideshow">Slideshow</string>
 
     <string name="welcome_messages">Hello, %1$s! You have &lt;b>%2$d&lt;/b> new messages.</string>
+    <string name="ok">OK</string>
+    <string name="sample_message">Its a sample message!</string>
 </resources>

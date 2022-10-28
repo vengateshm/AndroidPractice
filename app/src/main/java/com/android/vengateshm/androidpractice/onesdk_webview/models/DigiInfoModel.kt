@@ -5,5 +5,5 @@ import com.android.vengateshm.androidpractice.onesdk_webview.manager.EncryptedPo
 data class DigiInfoModel(
     val portfolioNo: String,
     val encryptedPortfoliosModel: EncryptedPortfoliosModel,
-    val holdingId:String
+    val holdingId: String,
 )

@@ -9,5 +9,5 @@ data class WordResponseItem(
     @SerializedName("phonetics")
     val phonetics: List<Phonetic>,
     @SerializedName("word")
-    val word: String
+    val word: String,
 )

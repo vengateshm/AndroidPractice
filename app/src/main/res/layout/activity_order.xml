@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".paymentsIntegration.razorPay.android_sdk.OrderActivity">
+    tools:context=".payment_integration.razorPay.android_sdk.OrderActivity">
 
     <Button
         android:id="@+id/btnCreateOrder"

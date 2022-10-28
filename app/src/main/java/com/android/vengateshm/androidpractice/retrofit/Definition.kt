@@ -9,5 +9,5 @@ data class Definition(
     @SerializedName("example")
     val example: String,
     @SerializedName("synonyms")
-    val synonyms: List<String>
+    val synonyms: List<String>,
 )

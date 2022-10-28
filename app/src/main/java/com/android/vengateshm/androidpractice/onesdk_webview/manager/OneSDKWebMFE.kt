@@ -64,11 +64,12 @@ object OneSDKWebMFE {
             jsInterface
         )
     }
+
     //
     fun launchWebMFEPage(
         context: Context,
         serviceId: String,
-        digiParamList: HashMap<String,String>,
+        digiParamList: HashMap<String, String>,
         serviceUrl: String,
     ) {
         OneSDKWebMFEParamManager.launchWebMFEPage(
@@ -83,7 +84,7 @@ object OneSDKWebMFE {
     fun launchWebMFEPage(
         context: Context,
         serviceId: String,
-        digiParamList: HashMap<String,String>,
+        digiParamList: HashMap<String, String>,
         serviceUrl: String,
         jsInterface: Parcelable,
     ) {

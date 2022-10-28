@@ -2,11 +2,10 @@ package com.android.vengateshm.androidpractice
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.android.vengateshm.androidpractice.common.Result
-import com.android.vengateshm.androidpractice.liveDataFlowViewModelTesting.WeatherDataRepository
-import com.android.vengateshm.androidpractice.liveDataFlowViewModelTesting.WeatherDataViewModel
+import com.android.vengateshm.androidpractice.livedata_flow_viewmodel_testing.WeatherDataRepository
+import com.android.vengateshm.androidpractice.livedata_flow_viewmodel_testing.WeatherDataViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.InternalCoroutinesApi
-import kotlinx.coroutines.flow.collectIndexed
 import kotlinx.coroutines.flow.toList
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.runBlockingTest

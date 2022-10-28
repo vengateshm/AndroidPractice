@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:textColor="@color/blue_soft"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Menu" />
+
+        <TextView
+            android:id="@+id/tvShare"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:drawableTint="@color/blue_moon"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:text="Share"
+            app:drawableStartCompat="@android:drawable/ic_menu_share"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawablePadding="16dp"
+            android:drawableTint="@color/blue_moon"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:text="Save"
+            app:drawableStartCompat="@android:drawable/ic_menu_save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvShare" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

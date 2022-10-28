@@ -31,9 +31,9 @@
     <TextView
         android:id="@+id/tvSun"
         android:layout_width="0dp"
-        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:text="Sun is the biggest star of our solar system."
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/ivSun" />
@@ -52,8 +52,8 @@
         android:id="@+id/tvEarth"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
         android:text="The only planet where life exists"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/ivEarth" />
@@ -71,9 +71,9 @@
     <TextView
         android:id="@+id/tvMars"
         android:layout_width="0dp"
-        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:text="Mars will be terraformed by Elon Musks' SpaceX"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/ivMars" />
@@ -91,9 +91,9 @@
     <TextView
         android:id="@+id/tvSaturn"
         android:layout_width="0dp"
-        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:text="Saturn has rings and more moons."
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="@+id/ivSaturn" />

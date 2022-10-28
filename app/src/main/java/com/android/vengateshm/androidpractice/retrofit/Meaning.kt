@@ -7,5 +7,5 @@ data class Meaning(
     @SerializedName("definitions")
     val definitions: List<Definition>,
     @SerializedName("partOfSpeech")
-    val partOfSpeech: String
+    val partOfSpeech: String,
 )

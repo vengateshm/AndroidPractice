@@ -7,5 +7,5 @@ data class Phonetic(
     @SerializedName("audio")
     val audio: String,
     @SerializedName("text")
-    val text: String
+    val text: String,
 )

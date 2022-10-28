@@ -1,7 +1,7 @@
 package com.android.vengateshm.androidpractice
 
 import com.android.vengateshm.androidpractice.common.Result
-import com.android.vengateshm.androidpractice.liveDataFlowViewModelTesting.WeatherDataRepository
+import com.android.vengateshm.androidpractice.livedata_flow_viewmodel_testing.WeatherDataRepository
 import kotlinx.coroutines.runBlocking
 import org.junit.Assert
 import org.junit.Before

@@ -15,8 +15,8 @@ import androidx.lifecycle.lifecycleScope
 import com.android.vengateshm.androidpractice.dialog_fragments.Languages
 import com.android.vengateshm.androidpractice.dialog_fragments.ListDialogFragment
 import com.android.vengateshm.androidpractice.dialog_fragments.Technologies
-import com.android.vengateshm.androidpractice.paymentsIntegration.razorPay.payment_link_webview.RazorPayPaymentActivity
-import com.android.vengateshm.androidpractice.uicomponents.UiComponentsActivity
+import com.android.vengateshm.androidpractice.navigation_component.bottom_navigation.BottomNavActivity
+import com.android.vengateshm.androidpractice.payment_integration.razorPay.payment_link_webview.RazorPayPaymentActivity
 import kotlinx.coroutines.delay
 import kotlin.reflect.KClass
 
@@ -51,7 +51,8 @@ class MainActivity : AppCompatActivity() {
 //        launchActivity<SlidingNavDrawerActivity>()
 //        launchActivity<FileConversionActivity>()
 //        launchActivity<DemoActivity>()
-        launchActivity<UiComponentsActivity>()
+//        launchActivity<UiComponentsActivity>()
+        launchActivity<BottomNavActivity>()
     }
 
     @RequiresApi(Build.VERSION_CODES.N)

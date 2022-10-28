@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.android.vengateshm.androidpractice.navigation_component.bottom_navigation.DashboardFragment"
+        android:label="DashboardFragment">
+        <action
+            android:id="@+id/action_dashboardFragment_to_myDialogFragment"
+            app:destination="@id/myDialogFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_myBottomDialogFragment"
+            app:destination="@id/myBottomDialogFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_sampleDestinationActivity"
+            app:destination="@id/sampleDestinationActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/moreFragment"
+        android:name="com.android.vengateshm.androidpractice.navigation_component.bottom_navigation.MoreFragment"
+        android:label="MoreFragment" />
+    <dialog
+        android:id="@+id/myDialogFragment"
+        android:name="com.android.vengateshm.androidpractice.navigation_component.bottom_navigation.MyDialogFragment"
+        android:label="MyDialogFragment">
+        <argument
+            android:name="title"
+            android:defaultValue="Menu"
+            app:argType="string" />
+    </dialog>
+    <dialog
+        android:id="@+id/myBottomDialogFragment"
+        android:name="com.android.vengateshm.androidpractice.navigation_component.bottom_navigation.MyBottomDialogFragment"
+        android:label="MyBottomDialogFragment">
+        <argument
+            android:name="title"
+            android:defaultValue="Menu"
+            app:argType="string" />
+    </dialog>
+    <!--<activity
+        android:id="@+id/sampleDestinationActivity"
+        android:name="com.android.vengateshm.androidpractice.navigationComponent.bottomNavView.SampleDestinationActivity"
+        android:label="SampleDestinationActivity" />-->
+    <activity
+        android:id="@+id/sampleDestinationActivity"
+        android:label="SampleDestinationActivity"
+        app:action="android.intent.action.VIEW"
+        app:data="https://sample.com?text={text}"
+        app:targetPackage="${applicationId}">
+
+        <argument
+            android:name="text"
+            android:defaultValue="Hello"
+            app:argType="string" />
+    </activity>
+</navigation>

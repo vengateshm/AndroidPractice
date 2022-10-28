@@ -16,7 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidPractice">
         <activity
-            android:name=".uicomponents.UiComponentsActivity"
+            android:name=".navigation_component.bottom_navigation.BottomNavActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui_components.UiComponentsActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -30,7 +33,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".sliding_navigation_drawer.SlidingNavDrawerActivity"
+            android:name=".navigation_component.navigation_drawer.SlidingNavDrawerActivity"
             android:exported="false"
             android:label="@string/title_activity_sliding_nav_drawer"
             android:theme="@style/Theme.AndroidPractice.NoActionBar" />
@@ -47,13 +50,13 @@
             android:name=".preferences_datastore.PreferenceDatastoreActivity"
             android:exported="false" />
         <activity
-            android:name=".paymentsIntegration.razorPay.android_sdk.MyPaymentActivity"
+            android:name=".payment_integration.razorPay.android_sdk.MyPaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".paymentsIntegration.razorPay.android_sdk.OrderActivity"
+            android:name=".payment_integration.razorPay.android_sdk.OrderActivity"
             android:exported="false" />
         <activity
-            android:name=".paymentsIntegration.razorPay.payment_link_webview.RazorPayPaymentActivity"
+            android:name=".payment_integration.razorPay.payment_link_webview.RazorPayPaymentActivity"
             android:exported="true">
             <intent-filter android:label="razor_pay_activity_deep_link">
                 <action android:name="android.intent.action.VIEW" />
@@ -71,13 +74,13 @@
             android:name=".constraint_layout.ConstraintLayoutActivity"
             android:exported="false" />
         <activity
-            android:name=".liveDataOneTimeEvent.OneTimeEventActivity"
+            android:name=".livedata_one_time_event.OneTimeEventActivity"
             android:exported="false" />
         <activity
-            android:name=".liveDataFlowViewModelTesting.WeatherDataActivity"
+            android:name=".livedata_flow_viewmodel_testing.WeatherDataActivity"
             android:exported="false" />
         <activity
-            android:name=".webviewReactJS.WebViewReactJsActivity"
+            android:name=".webview_react_js.WebViewReactJsActivity"
             android:exported="true" />
         <activity
             android:name=".observable_types.ObservableTypesActivity"
@@ -99,6 +102,19 @@
         <activity
             android:name=".onesdk_webview.ui.OneSDKWebPageLandingActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".navigation_component.bottom_navigation.SampleDestinationActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="sample.com"
+                    android:scheme="https" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <receiver
             android:name="com.razorpay.RzpTokenReceiver"

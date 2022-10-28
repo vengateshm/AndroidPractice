@@ -28,4 +28,8 @@
     <style name="Theme.AndroidPractice.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.AndroidPractice.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="DialogFragmentTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/black</item>
+    </style>
 </resources>
