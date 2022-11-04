@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.text.HtmlCompat.FROM_HTML_MODE_LEGACY
 import androidx.lifecycle.lifecycleScope
+import com.android.vengateshm.androidpractice.di.SampleDiActivity
 import com.android.vengateshm.androidpractice.dialog_fragments.Languages
 import com.android.vengateshm.androidpractice.dialog_fragments.ListDialogFragment
 import com.android.vengateshm.androidpractice.dialog_fragments.Technologies
@@ -52,7 +53,8 @@ class MainActivity : AppCompatActivity() {
 //        launchActivity<FileConversionActivity>()
 //        launchActivity<DemoActivity>()
 //        launchActivity<UiComponentsActivity>()
-        launchActivity<BottomNavActivity>()
+//        launchActivity<BottomNavActivity>()
+        launchActivity<SampleDiActivity>()
     }
 
     @RequiresApi(Build.VERSION_CODES.N)

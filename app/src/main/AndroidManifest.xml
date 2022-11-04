@@ -115,6 +115,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity android:name=".di.SampleDiActivity" />
 
         <receiver
             android:name="com.razorpay.RzpTokenReceiver"
