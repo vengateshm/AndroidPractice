@@ -18,6 +18,7 @@ import com.android.vengateshm.androidpractice.dialog_fragments.ListDialogFragmen
 import com.android.vengateshm.androidpractice.dialog_fragments.Technologies
 import com.android.vengateshm.androidpractice.navigation_component.bottom_navigation.BottomNavActivity
 import com.android.vengateshm.androidpractice.payment_integration.razorPay.payment_link_webview.RazorPayPaymentActivity
+import dev.vengateshm.stock_exchange.StockActivity
 import kotlinx.coroutines.delay
 import kotlin.reflect.KClass
 
@@ -54,7 +55,8 @@ class MainActivity : AppCompatActivity() {
 //        launchActivity<DemoActivity>()
 //        launchActivity<UiComponentsActivity>()
 //        launchActivity<BottomNavActivity>()
-        launchActivity<SampleDiActivity>()
+//        launchActivity<SampleDiActivity>()
+        launchActivity<StockActivity>()
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
