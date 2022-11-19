@@ -116,6 +116,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".di.SampleDiActivity" />
+        <activity android:name=".custom_views.CustomViewsActivity" />
 
         <receiver
             android:name="com.razorpay.RzpTokenReceiver"

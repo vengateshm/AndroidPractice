@@ -12,13 +12,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.text.HtmlCompat.FROM_HTML_MODE_LEGACY
 import androidx.lifecycle.lifecycleScope
-import com.android.vengateshm.androidpractice.di.SampleDiActivity
+import com.android.vengateshm.androidpractice.custom_views.CustomViewsActivity
 import com.android.vengateshm.androidpractice.dialog_fragments.Languages
 import com.android.vengateshm.androidpractice.dialog_fragments.ListDialogFragment
 import com.android.vengateshm.androidpractice.dialog_fragments.Technologies
-import com.android.vengateshm.androidpractice.navigation_component.bottom_navigation.BottomNavActivity
 import com.android.vengateshm.androidpractice.payment_integration.razorPay.payment_link_webview.RazorPayPaymentActivity
-import dev.vengateshm.stock_exchange.StockActivity
 import kotlinx.coroutines.delay
 import kotlin.reflect.KClass
 
@@ -56,7 +54,8 @@ class MainActivity : AppCompatActivity() {
 //        launchActivity<UiComponentsActivity>()
 //        launchActivity<BottomNavActivity>()
 //        launchActivity<SampleDiActivity>()
-        launchActivity<StockActivity>()
+//        launchActivity<StockActivity>()
+        launchActivity<CustomViewsActivity>()
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
