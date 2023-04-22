@@ -5,8 +5,6 @@
 happ/src/main/java/com/android/vengateshm/androidpractice/fortnight_calendar/FortNightCalendarActivity.kt,6\d\6dd9917aa2d9051fca5bca1dbb6360e0804ff6c1
 £
 sapp/src/main/java/com/android/vengateshm/androidpractice/navigation_component/bottom_navigation/MyDialogFragment.kt,0\d\0d2227cf6744bb501c53d94ac897e33e37dcf4b3
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 Å
 Qapp/src/main/java/com/android/vengateshm/androidpractice/testing/MainViewModel.kt,7\2\726f819284bc4a87579f92b01b74291df1e8f6c2
 }
