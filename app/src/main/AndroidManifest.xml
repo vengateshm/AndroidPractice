@@ -123,6 +123,9 @@
             android:exported="true"
             tools:node="merge"
             tools:replace="android:exported" />
+        <activity
+            android:name=".testing.ImageShareActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

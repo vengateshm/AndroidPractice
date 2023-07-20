@@ -10,6 +10,7 @@ android {
     compileSdk 33
 
     defaultConfig {
+        namespace "com.android.vengateshm.androidpractice"
         applicationId "com.android.vengateshm.androidpractice"
         minSdk 21
         targetSdk 33
@@ -31,12 +32,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '17'
     }
 
     buildFeatures {
@@ -47,31 +48,40 @@ android {
     kapt {
         correctErrorTypes = true
     }
+
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.core:core-splashscreen:1.0.1' // For versions below 12
+
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
+
+    implementation 'com.google.android.material:material:1.9.0'
+
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    //AndroidX Lifecycle
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
-
-    implementation 'androidx.core:core-splashscreen:1.0.0' // For versions below 12
-
-    implementation 'com.razorpay:checkout:1.6.26'
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
 
     // Navigation component
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
-    def kotlinx_coroutines = '1.6.4'
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines"
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutines"
-
     def preference_datastore_version = "1.0.0"
     implementation "androidx.datastore:datastore-preferences:$preference_datastore_version"
+
+    def kotlinx_coroutines = "1.6.4"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinx_coroutines"
+    def kotlinx_coroutines_android = "1.7.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlinx_coroutines_android"
 
     def retrofit_version = "2.9.0"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
@@ -107,17 +117,16 @@ dependencies {
     kapt "com.airbnb.android:epoxy-processor:$epoxy_version"
 
     // Koin
-    // Koin for Android
-    def koin_version = "3.2.2"
-    def koin_android_version = "3.2.2"
+    def koin_android_version = "3.3.2"
     implementation "io.insert-koin:koin-android:$koin_android_version"
 
     // Dagger - Hilt
-    implementation "com.google.dagger:hilt-android:2.45"
-    kapt "com.google.dagger:hilt-android-compiler:2.45"
+    implementation "com.google.dagger:hilt-android:$dagger_hilt"
+    kapt "com.google.dagger:hilt-android-compiler:$dagger_hilt"
+
+    implementation 'com.razorpay:checkout:1.6.26'
 
     //implementation project (':excel_to_pdf')
-
     implementation project(':stock-exchange')
 
     // Test dependencies
@@ -125,6 +134,8 @@ dependencies {
     testImplementation "io.mockk:mockk:1.13.5"
     testImplementation "androidx.arch.core:core-testing:2.2.0"
     testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$kotlinx_coroutines"
+    testImplementation "org.robolectric:robolectric:4.10.3"
+    testImplementation "com.google.truth:truth:1.1.4"
 
     // Android test dependencies
     // AndroidJUnitRunner
@@ -140,6 +151,6 @@ dependencies {
 
     androidTestImplementation "androidx.navigation:navigation-testing:$nav_version"
 
-    def fragment_version = "1.5.6"
+    def fragment_version = "1.6.0"
     debugImplementation "androidx.fragment:fragment-testing:$fragment_version"
 }
