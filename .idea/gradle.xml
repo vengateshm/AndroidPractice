@@ -13,6 +13,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/excel_to_pdf" />
+            <option value="$PROJECT_DIR$/material3xml" />
             <option value="$PROJECT_DIR$/stock-exchange" />
           </set>
         </option>
