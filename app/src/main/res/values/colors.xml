@@ -13,4 +13,7 @@
     <color name="orange_sun">#FFFD841F</color>
     <color name="yellow_soft">#FFFDFDBD</color>
     <color name="gray">#FF8C8C8C</color>
+
+    <color name="fwTheme">#FF2F8D46</color>
+    <color name="fwThemeTwo">#FF098043</color>
 </resources>
