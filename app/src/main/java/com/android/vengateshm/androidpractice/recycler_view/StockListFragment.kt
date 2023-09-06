@@ -16,7 +16,8 @@ class StockListFragment : Fragment() {
     private val binding
         get() = _binding!!
 
-    private lateinit var stockListAdapter: StockListAdapter
+    //    private lateinit var stockListAdapter: StockListAdapter
+    private lateinit var stockListAdapter: StockListAdapterAsync
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -31,11 +32,14 @@ class StockListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.tvRefresh.setOnClickListener {
-            onRefreshClicked()
+//            onRefreshClicked()
+            onRefreshClickedAsync()
         }
 
-        stockListAdapter = StockListAdapter()
-        stockListAdapter.stockList = stockDataList.toMutableList()
+//        stockListAdapter = StockListAdapter()
+        stockListAdapter = StockListAdapterAsync()
+//        stockListAdapter.stockList = stockDataList.toMutableList()
+        stockListAdapter.submitList(stockDataList.toMutableList())
 
         with(binding.rvStocks) {
             layoutManager =
@@ -45,26 +49,36 @@ class StockListFragment : Fragment() {
                     requireContext(), DividerItemDecoration.VERTICAL
                 )
             )
-            //itemAnimator = null
+            itemAnimator = null
             adapter = stockListAdapter
         }
     }
 
     private fun onRefreshClicked() {
-        stockListAdapter.stockList.map { stock ->
-            val updatedPrice = generateRandomPrice()
-            stock.copy(price = updatedPrice)
-        }.also { updatedStockList ->
-            // DiffUtil
+//        getUpdatedStockList(stockListAdapter.stockList).also { updatedStockList ->
+        // DiffUtil
 //            stockListAdapter.updateData(updatedStockList)
-            // Notify Dataset changed
-            /*stockListAdapter.stockList = updatedStockList
-            stockListAdapter.notifyDataSetChanged()*/
-            // Partial updates
-            updatedStockList.forEachIndexed { index, stock ->
-                stockListAdapter.updateItemWithPayload(index, stock)
-            }
+
+        // notifyDatasetChanged
+//            stockListAdapter.stockList = updatedStockList
+//            stockListAdapter.notifyDataSetChanged()
+
+        // Partial updates
+//            updatedStockList.forEachIndexed { index, stock ->
+//                stockListAdapter.updateItemWithPayload(index, stock)
+//            }
+//        }
+    }
+
+    private fun onRefreshClickedAsync() {
+        getUpdatedStockList(stockListAdapter.asyncListDiffer.currentList).also { updatedStockList ->
+            stockListAdapter.submitList(updatedStockList)
         }
+    }
+
+    private fun getUpdatedStockList(stockList: MutableList<Stock>) = stockList.map { stock ->
+        val updatedPrice = generateRandomPrice()
+        stock.copy(price = updatedPrice)
     }
 
     override fun onDestroyView() {
