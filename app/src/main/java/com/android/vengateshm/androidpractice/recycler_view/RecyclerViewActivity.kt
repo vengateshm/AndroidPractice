@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.android.vengateshm.androidpractice.databinding.ActivityRecyclerViewBinding
+import com.android.vengateshm.androidpractice.viewpager2_transformations.ScaleInTransformer
 import com.google.android.material.tabs.TabLayoutMediator
 
 class RecyclerViewActivity : AppCompatActivity() {
@@ -20,6 +21,11 @@ class RecyclerViewActivity : AppCompatActivity() {
 
         binding = ActivityRecyclerViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.viewPager2.setPageTransformer(ScaleInTransformer())
+//        binding.viewPager2.setPageTransformer(DepthPageTransformer())
+//        binding.viewPager2.setPageTransformer(RotationPageTransformer())
+//        binding.viewPager2.setPageTransformer(ZoomOutPageTransformer())
 
         val adapter = ViewPagerAdapter(this, fragmentList)
         binding.viewPager2.adapter = adapter
