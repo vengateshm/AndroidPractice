@@ -131,7 +131,11 @@
         <activity
             android:name=".floating_window.FloatingWindowActivity"
             android:exported="true" />
-        <service android:name=".floating_window.FloatingWindowService"/>
+
+        <service android:name=".floating_window.FloatingWindowService" />
+        <activity
+            android:name=".recycler_view.RecyclerViewActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

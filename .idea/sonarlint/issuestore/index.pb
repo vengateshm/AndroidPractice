@@ -64,7 +64,5 @@ napp/src/main/java/com/android/vengateshm/androidpractice/kotlin_apis/extension_
 Vapp/src/main/java/com/android/vengateshm/androidpractice/testing/ImageShareActivity.kt,3\6\36ad5d1218d262003bbd45ae3386384186e691d0
 ‚
 Rapp/src/main/java/com/android/vengateshm/androidpractice/retrofit/DictionaryApi.kt,c\9\c9737c300a1c1f2466f97dc02ca2ff43228b1298
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 ’
 bapp/src/main/java/com/android/vengateshm/androidpractice/floating_window/FloatingWindowActivity.kt,d\d\dde8cc2014f4be298f701dde5407d78f133859e8
