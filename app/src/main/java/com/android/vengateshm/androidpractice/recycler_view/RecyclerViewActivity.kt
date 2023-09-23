@@ -10,11 +10,12 @@ import com.google.android.material.tabs.TabLayoutMediator
 
 class RecyclerViewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRecyclerViewBinding
-    private val fragmentList = listOf<Fragment>(
+    private val fragmentList = listOf(
         StockListFragment(),
-        MutualFundsListFragment()
+        MutualFundsListFragment(),
+        SettingListFragment()
     )
-    private val tabTitles = listOf("Stocks", "Mutual Funds")
+    private val tabTitles = listOf("Stocks", "Mutual Funds", "Settings")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
