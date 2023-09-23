@@ -108,6 +108,7 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <data
                     android:host="sample.com"
                     android:scheme="https" />
@@ -133,8 +134,12 @@
             android:exported="true" />
 
         <service android:name=".floating_window.FloatingWindowService" />
+
         <activity
             android:name=".recycler_view.RecyclerViewActivity"
+            android:exported="true" />
+        <activity
+            android:name=".app_clones.whatsapp.WhatsAppLandingActivity"
             android:exported="true" />
     </application>
 

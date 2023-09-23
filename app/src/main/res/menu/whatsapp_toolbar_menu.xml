@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/mnuCamera"
+        android:icon="@drawable/ic_whatsapp_camera"
+        android:title="Camera"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/mnuSearch"
+        android:icon="@drawable/ic_whatsapp_search"
+        android:title="Search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/mnuMore"
+        android:icon="@drawable/ic_whatsapp_more_vert"
+        android:title="More"
+        app:showAsAction="ifRoom" />
+</menu>
