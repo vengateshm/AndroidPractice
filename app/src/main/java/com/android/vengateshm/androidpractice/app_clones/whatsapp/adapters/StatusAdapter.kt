@@ -30,11 +30,13 @@ class StatusAdapter : RecyclerView.Adapter<StatusAdapter.ViewHolder>() {
     inner class ViewHolder(private val binding: StatusListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bindItem(status: Status) {
-            binding.tvUserName.text = status.userName
-            Glide.with(binding.ivProfilePic)
-                .load(status.profilePicUrl)
-                .apply(RequestOptions().transform(CircleCrop()))
-                .into(binding.ivProfilePic)
+            with(binding) {
+                tvUserName.text = status.userName
+                Glide.with(ivProfilePic)
+                    .load(status.profilePicUrl)
+                    .apply(RequestOptions().transform(CircleCrop()))
+                    .into(ivProfilePic)
+            }
         }
     }
 }

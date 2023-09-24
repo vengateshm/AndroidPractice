@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.vengateshm.androidpractice.app_clones.whatsapp.adapters.ChannelHorizontalListAdapter
 import com.android.vengateshm.androidpractice.app_clones.whatsapp.adapters.StatusAdapter
+import com.android.vengateshm.androidpractice.app_clones.whatsapp.models.Channel
 import com.android.vengateshm.androidpractice.app_clones.whatsapp.models.Status
 import com.android.vengateshm.androidpractice.databinding.FragmentUpdatesBinding
 
@@ -17,6 +19,7 @@ class UpdatesFragment : Fragment() {
         get() = _binding!!
 
     private lateinit var statusAdapter: StatusAdapter
+    private lateinit var channelHorizontalListAdapter: ChannelHorizontalListAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,6 +39,13 @@ class UpdatesFragment : Fragment() {
             rvStatusList.layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             rvStatusList.adapter = statusAdapter
+
+            channelHorizontalListAdapter = ChannelHorizontalListAdapter()
+            channelHorizontalListAdapter.channelList = Channel.getChannelList()
+
+            rvChannelsHorizontalList.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            rvChannelsHorizontalList.adapter = channelHorizontalListAdapter
         }
     }
 
