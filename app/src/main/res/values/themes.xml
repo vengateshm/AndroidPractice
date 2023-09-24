@@ -32,4 +32,9 @@
     <style name="DialogFragmentTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="colorAccent">@color/black</item>
     </style>
+
+    <style name="rounded_corner_fab">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20%</item>
+    </style>
 </resources>

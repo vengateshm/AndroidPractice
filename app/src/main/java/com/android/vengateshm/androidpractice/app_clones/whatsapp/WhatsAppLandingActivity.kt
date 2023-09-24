@@ -51,13 +51,10 @@ class WhatsAppLandingActivity : AppCompatActivity() {
             }
         }.attach()
 
-        // Add a page change listener to the ViewPager2
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
-                // Handle page selection here
-                // 'position' is the index of the selected page
-                // You can perform actions based on the selected page
                 currentTabPosition = position
+                invalidateOptionsMenu()
             }
         })
     }
@@ -65,6 +62,23 @@ class WhatsAppLandingActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.whatsapp_toolbar_menu, menu)
         return true
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
+        when (binding.tabLayout.selectedTabPosition) {
+            0, 2 -> {
+                menu?.findItem(R.id.mnuCamera)?.isVisible = true
+                menu?.findItem(R.id.mnuSearch)?.isVisible = false
+                menu?.findItem(R.id.mnuMore)?.isVisible = true
+            }
+
+            else -> {
+                menu?.findItem(R.id.mnuCamera)?.isVisible = true
+                menu?.findItem(R.id.mnuSearch)?.isVisible = true
+                menu?.findItem(R.id.mnuMore)?.isVisible = true
+            }
+        }
+        return super.onPrepareOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

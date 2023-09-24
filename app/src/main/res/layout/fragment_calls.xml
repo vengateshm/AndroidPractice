@@ -1,8 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".app_clones.whatsapp.CallsFragment">
+
+    <View
+        android:id="@+id/vCircleBg"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/circle_bg_purple_500"
+        android:rotation="45"
+        android:src="@drawable/ic_whatsapp_round_link"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCreateLink"
+        android:layout_width="32sp"
+        android:layout_height="32dp"
+        android:src="@drawable/ic_whatsapp_round_link"
+        app:layout_constraintBottom_toBottomOf="@+id/vCircleBg"
+        app:layout_constraintEnd_toEndOf="@+id/vCircleBg"
+        app:layout_constraintStart_toStartOf="@+id/vCircleBg"
+        app:layout_constraintTop_toTopOf="@+id/vCircleBg" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Create call link"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@id/vCircleBg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Share a link for your WhatsApp\n call"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/vCircleBg"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <TextView
+        android:id="@+id/tvNoCallHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="To start calling contacts who have\nWhatsApp, tap at the bottom\nof your screen. "
+        android:textColor="#666666"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabCreateCallLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@drawable/baseline_add_ic_call_24"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:backgroundTint="@color/purple_500"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearanceOverlay="@style/rounded_corner_fab" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
