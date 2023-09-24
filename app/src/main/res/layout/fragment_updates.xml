@@ -7,6 +7,32 @@
     android:padding="16dp"
     tools:context=".app_clones.whatsapp.UpdatesFragment">
 
+    <TextView
+        android:id="@+id/tvStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textColor="#333333"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_whatsapp_more_vert"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#777777" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStatusList"
+        android:layout_width="match_parent"
+        android:layout_marginTop="16dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvStatusLabel" />
+
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabNewTextStatus"
         android:layout_width="wrap_content"
