@@ -1,9 +1,11 @@
 package com.android.vengateshm.androidpractice.app_clones.whatsapp.adapters
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.android.vengateshm.androidpractice.app_clones.whatsapp.models.Status
+import com.android.vengateshm.androidpractice.app_clones.whatsapp.models.toBorderedData
 import com.android.vengateshm.androidpractice.databinding.StatusListItemBinding
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CircleCrop
@@ -32,6 +34,14 @@ class StatusAdapter : RecyclerView.Adapter<StatusAdapter.ViewHolder>() {
         fun bindItem(status: Status) {
             with(binding) {
                 tvUserName.text = status.userName
+
+                if (status.statusContents.isEmpty()) {
+                    vProfilePicBg.visibility = View.INVISIBLE
+                } else {
+                    vProfilePicBg.visibility = View.VISIBLE
+                    vProfilePicBg.setSegments(status.statusContents.map { it.toBorderedData() })
+                }
+
                 Glide.with(ivProfilePic)
                     .load(status.profilePicUrl)
                     .apply(RequestOptions().transform(CircleCrop()))

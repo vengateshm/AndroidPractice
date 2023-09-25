@@ -1,5 +1,7 @@
 package com.android.vengateshm.androidpractice.app_clones.whatsapp.models
 
+import com.android.vengateshm.androidpractice.app_clones.whatsapp.BorderedData
+
 data class Status(
     val id: Int,
     val userName: String,
@@ -23,12 +25,14 @@ data class Status(
                         StatusContent(
                             id = 1,
                             type = StatusContentType.IMAGE,
-                            contentUrl = ""
+                            contentUrl = "",
+                            isSeen = true
                         ),
                         StatusContent(
                             id = 2,
                             type = StatusContentType.VIDEO,
-                            contentUrl = ""
+                            contentUrl = "",
+                            isSeen = false
                         ),
                     )
                 ),
@@ -40,12 +44,14 @@ data class Status(
                         StatusContent(
                             id = 3,
                             type = StatusContentType.TEXT,
-                            contentUrl = ""
+                            contentUrl = "",
+                            isSeen = true
                         ),
                         StatusContent(
                             id = 4,
                             type = StatusContentType.IMAGE,
-                            contentUrl = ""
+                            contentUrl = "",
+                            isSeen = true
                         ),
                     )
                 ),
@@ -54,3 +60,6 @@ data class Status(
     }
 }
 
+fun StatusContent.toBorderedData() = BorderedData(
+    highlight = !this.isSeen
+)

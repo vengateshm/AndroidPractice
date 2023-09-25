@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
@@ -11,6 +12,7 @@ import androidx.core.view.isVisible
 import androidx.viewpager2.widget.ViewPager2
 import com.android.vengateshm.androidpractice.R
 import com.android.vengateshm.androidpractice.databinding.ActivityWhatsAppLandingBinding
+import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
 class WhatsAppLandingActivity : AppCompatActivity() {
@@ -51,6 +53,8 @@ class WhatsAppLandingActivity : AppCompatActivity() {
                 else -> error("Unknown position")
             }
         }.attach()
+
+        binding.tabLayout.setTabWidthAsWrapContent(0)
 
         binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
@@ -204,4 +208,12 @@ class WhatsAppLandingActivity : AppCompatActivity() {
 
         popupMenu.show()
     }
+}
+
+fun TabLayout.setTabWidthAsWrapContent(tabPosition: Int) {
+    val layout = (this.getChildAt(0) as LinearLayout).getChildAt(tabPosition) as LinearLayout
+    val layoutParams = layout.layoutParams as LinearLayout.LayoutParams
+    layoutParams.weight = 0f
+    layoutParams.width = LinearLayout.LayoutParams.WRAP_CONTENT
+    layout.layoutParams = layoutParams
 }

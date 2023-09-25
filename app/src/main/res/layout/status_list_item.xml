@@ -6,13 +6,22 @@
     android:paddingStart="4dp"
     android:paddingEnd="4dp">
 
+    <com.android.vengateshm.androidpractice.app_clones.whatsapp.BorderedCircle
+        android:id="@+id/vProfilePicBg"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/ivProfilePic"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/vProfilePicBg"
+        app:layout_constraintEnd_toEndOf="@id/vProfilePicBg"
+        app:layout_constraintStart_toStartOf="@id/vProfilePicBg"
+        app:layout_constraintTop_toTopOf="@id/vProfilePicBg" />
 
     <TextView
         android:id="@+id/tvUserName"
@@ -20,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:textSize="13sp"
-        app:layout_constraintEnd_toEndOf="@id/ivProfilePic"
-        app:layout_constraintStart_toStartOf="@+id/ivProfilePic"
-        app:layout_constraintTop_toBottomOf="@id/ivProfilePic" />
+        app:layout_constraintEnd_toEndOf="@id/vProfilePicBg"
+        app:layout_constraintStart_toStartOf="@+id/vProfilePicBg"
+        app:layout_constraintTop_toBottomOf="@id/vProfilePicBg" />
 </androidx.constraintlayout.widget.ConstraintLayout>

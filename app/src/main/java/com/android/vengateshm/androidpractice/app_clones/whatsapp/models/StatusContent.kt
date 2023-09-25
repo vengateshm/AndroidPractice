@@ -4,4 +4,5 @@ data class StatusContent(
     val id:Int,
     val type: StatusContentType,
     val contentUrl: String,
+    val isSeen:Boolean
 )
