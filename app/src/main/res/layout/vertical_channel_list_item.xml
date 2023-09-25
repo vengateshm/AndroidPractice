@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingTop="8dp"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/vProfilePicBackground"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/bordered_circle_channel_profile_pic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="@id/vProfilePicBackground"
+        app:layout_constraintEnd_toEndOf="@id/vProfilePicBackground"
+        app:layout_constraintStart_toStartOf="@id/vProfilePicBackground"
+        app:layout_constraintTop_toTopOf="@id/vProfilePicBackground" />
+
+    <TextView
+        android:id="@+id/tvChannelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="#333333"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/ivProfilePic"
+        app:layout_constraintStart_toEndOf="@+id/vProfilePicBackground"
+        app:layout_constraintTop_toTopOf="@id/ivProfilePic"
+        tools:text="moneycontrol" />
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:textColor="#777777"
+        app:layout_constraintEnd_toStartOf="@id/ivContentPic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vProfilePicBackground"
+        tools:text="Pakistani cyber attackers using country domain code to target Indian defense personnel.
+Read the full story for details ⬇️" />
+
+    <ImageView
+        android:id="@+id/ivContentPic"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvContent" />
+
+    <TextView
+        android:id="@+id/tvUnreadCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/wa_unread_count"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvContent"
+        tools:text="\u2B24 171 unread" />
+
+    <TextView
+        android:id="@+id/tvDotSeparator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:textColor="#777777"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvUnreadCount"
+        app:layout_constraintStart_toEndOf="@id/tvUnreadCount"
+        app:layout_constraintTop_toBottomOf="@id/tvContent"
+        tools:text="\u2022" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="#777777"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/tvDotSeparator"
+        app:layout_constraintTop_toBottomOf="@id/tvContent"
+        tools:text="18 minutes ago" />
+
+    <View
+        android:id="@+id/vStatusDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#EEEEEE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTime" />
+</androidx.constraintlayout.widget.ConstraintLayout>

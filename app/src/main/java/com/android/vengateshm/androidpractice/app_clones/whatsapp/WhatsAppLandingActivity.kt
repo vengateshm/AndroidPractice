@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.PopupMenu
+import androidx.core.view.isVisible
 import androidx.viewpager2.widget.ViewPager2
 import com.android.vengateshm.androidpractice.R
 import com.android.vengateshm.androidpractice.databinding.ActivityWhatsAppLandingBinding
@@ -55,8 +56,37 @@ class WhatsAppLandingActivity : AppCompatActivity() {
             override fun onPageSelected(position: Int) {
                 currentTabPosition = position
                 invalidateOptionsMenu()
+                setFabVisibility(position)
             }
         })
+    }
+
+    private fun setFabVisibility(position: Int) {
+        when (position) {
+            0 -> {
+                binding.fabNewTextStatus.isVisible = false
+                binding.fabNewStatus.isVisible = false
+            }
+
+            1 -> {
+                animateFabByViewProperty(false, binding.fabNewTextStatus)
+                binding.fabNewStatus.isVisible = true
+                binding.fabNewStatus.setImageResource(R.drawable.round_chat_24)
+            }
+
+            2 -> {
+                animateFabByViewProperty(true, binding.fabNewTextStatus)
+                binding.fabNewStatus.isVisible = true
+                binding.fabNewStatus.setImageResource(R.drawable.round_photo_camera_24)
+            }
+
+            3 -> {
+                animateFabByViewProperty(false, binding.fabNewTextStatus)
+                binding.fabNewTextStatus.isVisible = false
+                binding.fabNewStatus.isVisible = true
+                binding.fabNewStatus.setImageResource(R.drawable.baseline_add_ic_call_24)
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

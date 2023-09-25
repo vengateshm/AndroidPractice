@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.android.vengateshm.androidpractice.app_clones.whatsapp.adapters.ChannelHorizontalListAdapter
+import com.android.vengateshm.androidpractice.app_clones.whatsapp.adapters.ChannelsVerticalListAdapter
 import com.android.vengateshm.androidpractice.app_clones.whatsapp.adapters.StatusAdapter
 import com.android.vengateshm.androidpractice.app_clones.whatsapp.models.Channel
 import com.android.vengateshm.androidpractice.app_clones.whatsapp.models.Status
@@ -19,6 +20,7 @@ class UpdatesFragment : Fragment() {
         get() = _binding!!
 
     private lateinit var statusAdapter: StatusAdapter
+    private lateinit var channelsVerticalListAdapter: ChannelsVerticalListAdapter
     private lateinit var channelHorizontalListAdapter: ChannelHorizontalListAdapter
 
     override fun onCreateView(
@@ -35,14 +37,18 @@ class UpdatesFragment : Fragment() {
         with(binding) {
             statusAdapter = StatusAdapter()
             statusAdapter.statusList = Status.getStatusList()
-
             rvStatusList.layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             rvStatusList.adapter = statusAdapter
 
-            channelHorizontalListAdapter = ChannelHorizontalListAdapter()
-            channelHorizontalListAdapter.channelList = Channel.getChannelList()
+            channelsVerticalListAdapter = ChannelsVerticalListAdapter()
+            channelsVerticalListAdapter.channelsList = Channel.getChannelList()
+            rvChannelsVerticalList.layoutManager =
+                LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            rvChannelsVerticalList.adapter = channelsVerticalListAdapter
 
+            channelHorizontalListAdapter = ChannelHorizontalListAdapter()
+            channelHorizontalListAdapter.channelList = Channel.getFindChannelList()
             rvChannelsHorizontalList.layoutManager =
                 LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             rvChannelsHorizontalList.adapter = channelHorizontalListAdapter

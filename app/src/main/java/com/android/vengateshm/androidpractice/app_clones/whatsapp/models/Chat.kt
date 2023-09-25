@@ -4,6 +4,7 @@ data class Chat(
     val id: Int,
     val toName: String,
     val toProfilePic: String,
+    val hasStatus: Boolean = false,
     val lastMessage: ChatMessage,
 ) {
     companion object {
@@ -13,6 +14,7 @@ data class Chat(
                     id = 1,
                     toName = "John Doe",
                     toProfilePic = "https://images.unsplash.com/photo-1580518380430-2f84c0a7fb85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=256&q=80",
+                    hasStatus = true,
                     lastMessage = ChatMessage(
                         id = 97,
                         status = MessageStatus.SENT,
@@ -39,6 +41,7 @@ data class Chat(
                     id = 3,
                     toName = "David Brown",
                     toProfilePic = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
+                    hasStatus = true,
                     lastMessage = ChatMessage(
                         id = 99,
                         status = MessageStatus.READ,

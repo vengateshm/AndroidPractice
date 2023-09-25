@@ -17,4 +17,5 @@
 
     <color name="fwTheme">#FF2F8D46</color>
     <color name="fwThemeTwo">#FF098043</color>
+    <color name="wa_unread_count">#DF00FF</color>
 </resources>

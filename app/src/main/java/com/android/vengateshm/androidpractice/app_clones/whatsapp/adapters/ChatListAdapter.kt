@@ -2,6 +2,7 @@ package com.android.vengateshm.androidpractice.app_clones.whatsapp.adapters
 
 import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.android.vengateshm.androidpractice.app_clones.whatsapp.models.Chat
@@ -41,7 +42,11 @@ class ChatListAdapter : RecyclerView.Adapter<ChatListAdapter.ViewHolder>() {
                     .load(chat.toProfilePic)
                     .apply(RequestOptions().transform(CircleCrop()))
                     .into(ivProfilePic)
-
+                if (chat.hasStatus) {
+                    vStatusBackground.visibility = View.VISIBLE
+                } else {
+                    vStatusBackground.visibility = View.INVISIBLE
+                }
                 with(chat.lastMessage) {
                     when (status) {
                         MessageStatus.SENT -> {
