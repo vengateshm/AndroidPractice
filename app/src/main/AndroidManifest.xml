@@ -141,6 +141,12 @@
         <activity
             android:name=".app_clones.whatsapp.WhatsAppLandingActivity"
             android:exported="true" />
+        <activity
+            android:name=".intent_queries.IntentQueriesSampleActivity"
+            android:exported="true" />
+        <activity
+            android:name=".tablayout_recyclerview.TabLayoutRecyclerViewActivity"
+            android:exported="true" />
     </application>
 
 </manifest>
